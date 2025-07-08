@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ableptr's Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Media Queries untuk Responsive */
+        
+        /* Desktop Besar (1024px ke atas) - Mempertahankan proporsi laptop */
+        @media (min-width: 1024px) {
+            .desktop-container {
+                max-width: none;
+                width: 100%;
+                padding-left: 8%;
+                padding-right: 8%;
+            }
+        }
+        
+        /* Tablet (768px - 1023px) */
+        @media (max-width: 1023px) and (min-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .about-content .profile-image {
+                width: 20rem;
+                height: 20rem;
+            }
+            
+            .about-content h1 {
+                font-size: 3rem;
+            }
+            
+            .software-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+            
+            .software-subgrid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Mobile (max-width: 767px) */
+        @media (max-width: 767px) {
+            .nav-button {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+            
+            .hero-section {
+                min-height: 60vh;
+            }
+            
+            .section-padding {
+                padding: 3rem 1rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .about-content .profile-image {
+                width: 16rem;
+                height: 16rem;
+            }
+            
+            .about-content h1 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            
+            .about-content h1:nth-child(2) {
+                margin-left: 0;
+            }
+            
+            .about-text {
+                text-align: center;
+            }
+            
+            .software-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .software-subgrid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .discover-link {
+                justify-content: center;
+            }
+        }
+        
+        /* Mobile Small (max-width: 480px) */
+        @media (max-width: 480px) {
+            .about-content h1 {
+                font-size: 2rem;
+            }
+            
+            .about-text {
+                font-size: 0.9rem;
+            }
+            
+            .software-subgrid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 right-0 z-50 p-6">
+        <button class="nav-button text-white text-lg px-4 py-2">
+            ≡ Menu
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section hero-bg min-h-screen flex justify-center relative">
+        <div class="w-full h-full">
+            <img src="banner.jpg" alt="" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-center scroll-indicator">
+            <div class="text-sm mb-2">SCROLL DOWN</div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section-padding py-20 px-8 max-w-6xl mx-auto desktop-container">
+        <!-- Section Header -->
+        <div class="text-right mb-16">
+            <h2 class="text-gray-900 text-sm tracking-widest">ABOUT ME</h2>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="about-content flex items-start gap-16">
+            <!-- Profile Image -->
+            <div class="flex-shrink-0">
+                <img src="profile.jpg" alt="Abel Putra Kadafi" class="profile-image w-96 h-96 object-cover rounded-sm">
+            </div>
+            
+            <!-- Text Content -->
+            <div class="flex-1">
+                <h1 class="text-6xl font-bold text-gray-900 leading-tight">
+                    WHO
+                </h1>
+                <h1 class="text-6xl -mt-4 font-bold text-gray-900 mb-8 leading-tight ml-8">AM I</h1>
+                
+                <div class="about-text text-base leading-relaxed mb-8">
+                    <p>I born in Kediri, East Java, Indonesia,</p>
+                    <p>where I currently reside. I am currently pursuing a Bachelor's</p>
+                    <p>Hello, my name is <strong>Abel Putra Kadafi</strong>.</p>
+                    <p>degree in Kriya Science at <strong>Institut Seni Indonesia Surakarta (ISI)</strong>.</p>
+                </div>
+                
+                <!-- Discover More Link -->
+                <div class="discover-link flex items-center gap-2 text-gray-900">
+                    <a href="#" class="text-2xl font-semibold">Discover More</a>
+                    <span class="text-3xl font-bold">→</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Section -->
+    <section class="section-padding py-20 px-8 max-w-6xl mx-auto desktop-container">
+        <!-- Section Header -->
+        <div class="mb-12">
+            <h2 class="text-gray-900 text-sm tracking-widest">SOFTWARE</h2>
+        </div>
+        
+        <!-- Software Grid -->
+        <div class="software-grid grid grid-cols-2 gap-32">
+            
+            <!-- Grid 1 -->
+            <div class="software-subgrid grid grid-cols-2 mxx-12">
+                <!-- Premiere Pro -->
+                <div class="text-center">
+                    <div class="mb-3">
+                        <img src="icons/app.png" alt="Premiere Pro" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="text-base mb-1">Premiere Pro</h3>
+                    <p class="text-base text-gray-900">75%</p>
+                </div>
+                
+                <!-- Photoshop -->
+                <div class="text-center">
+                    <div class="mb-3">
+                        <img src="icons/ap.png" alt="Photoshop" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="text-base mb-1">Photoshop</h3>
+                    <p class="text-base text-gray-900">95%</p>
+                </div>
+            </div>
+            
+            <!-- Grid 2 -->
+            <div class="software-subgrid grid grid-cols-2 mxx-12">
+                <!-- Lightroom Classic -->
+                <div class="text-center">
+                    <div class="mb-3">
+                        <img src="icons/alc.png" alt="Lightroom Classic" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="text-base mb-1">Lightroom Classic</h3>
+                    <p class="text-base text-gray-900">95%</p>
+                </div>
+                
+                <!-- Illustrator -->
+                <div class="text-center">
+                    <div class="mb-3">
+                        <img src="icons/ai.png" alt="Illustrator" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="text-base mb-1">Illustrator</h3>
+                    <p class="text-base text-gray-900">88%</p>
+                </div>
+            </div>
+
+            <!-- Grid 3 -->
+            <div class="software-subgrid grid grid-cols-2 mxx-12">
+                <!-- CapCut -->
+                <div class="text-center">
+                    <div class="mb-3">
+                        <img src="icons/capcut.png" alt="CapCut" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="text-base mb-1">CapCut</h3>
+                    <p class="text-base text-gray-900">98%</p>
+                </div>
+                
+                <!-- DaVinci Resolve -->
+                <div class="text-center">
+                    <div class="mb-3">
+                        <img src="icons/davinci.png" alt="DaVinci Resolve" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="text-base mb-1">DaVinci Resolve</h3>
+                    <p class="text-base text-gray-900">94%</p>
+                </div>
+            </div>
+            
+            <!-- Grid 4 -->
+            <div class="software-subgrid grid grid-cols-2 mxx-12">
+                <!-- After Effects -->
+                <div class="text-center">
+                    <div class="mb-3">
+                        <img src="icons/ae.png" alt="After Effects" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="text-base mb-1">After Effects</h3>
+                    <p class="text-base text-gray-900">93%</p>
+                </div>
+                
+                <!-- Blender -->
+                <div class="text-center">
+                    <div class="mb-3">
+                        <img src="icons/blender.png" alt="Blender" class="w-12 h-12 mx-auto">
+                    </div>
+                    <h3 class="text-base mb-1">Blender</h3>
+                    <p class="text-base text-gray-900">83%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
