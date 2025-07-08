@@ -22,20 +22,101 @@
             }
         }
 
-        /* Media Queries untuk Responsive */
+        /* Desktop Layout - Tampilan laptop optimal */
+        .desktop-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
         
-        /* Desktop Besar (1024px ke atas) - Mempertahankan proporsi laptop */
-        @media (min-width: 1024px) {
+        /* Desktop Laptop - Mempertahankan proporsi laptop */
+        @media (min-width: 1024px) and (max-width: 1439px) {
             .desktop-container {
-                max-width: none;
-                width: 100%;
-                padding-left: 8%;
-                padding-right: 8%;
+                max-width: 1200px;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+        
+        /* Desktop Besar - Sedikit lebih lebar */
+        @media (min-width: 1440px) and (max-width: 1919px) {
+            .desktop-container {
+                max-width: 1400px;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+        
+        /* Desktop Full HD 1920x1080 - Khusus untuk layar besar */
+        @media (min-width: 1920px) {
+            .desktop-container {
+                max-width: 1800px;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            
+            /* Perbesar elemen untuk tampilan 1920px */
+            .about-content .profile-image {
+                width: 32rem;
+                height: 32rem;
+            }
+            
+            .about-content h1 {
+                font-size: 8rem;
+            }
+            
+            .about-content h1:nth-child(2) {
+                margin-left: 2.5rem;
+            }
+            
+            .about-text {
+                font-size: 1.375rem;
+                line-height: 1.9;
+            }
+            
+            .discover-link a {
+                font-size: 2.75rem;
+            }
+            
+            .discover-link span {
+                font-size: 4rem;
+            }
+            
+            .software-grid {
+                gap: 10rem;
+            }
+            
+            .software-subgrid {
+                gap: 3rem;
+            }
+            
+            .software-subgrid img {
+                width: 4rem;
+                height: 4rem;
+            }
+            
+            .software-subgrid h3 {
+                font-size: 1.25rem;
+            }
+            
+            .software-subgrid p {
+                font-size: 1.125rem;
+            }
+            
+            .section-padding {
+                padding: 6rem 0;
             }
         }
         
         /* Tablet (768px - 1023px) */
         @media (max-width: 1023px) and (min-width: 768px) {
+            .desktop-container {
+                max-width: none;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+            
             .about-content {
                 flex-direction: column;
                 align-items: center;
@@ -64,6 +145,11 @@
         
         /* Mobile (max-width: 767px) */
         @media (max-width: 767px) {
+            .desktop-container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
             .nav-button {
                 padding: 1rem;
                 font-size: 1rem;
@@ -74,7 +160,7 @@
             }
             
             .section-padding {
-                padding: 3rem 1rem;
+                padding: 3rem 0;
             }
             
             .about-content {
@@ -145,7 +231,7 @@
     <!-- Hero Section -->
     <section class="hero-section hero-bg min-h-screen flex justify-center relative">
         <div class="w-full h-full">
-            <img src="banner.jpg" alt="" class="w-full h-full object-cover">
+            <img src="banner2.jpg" alt="" class="w-full h-full object-cover">
         </div>
         
         <!-- Scroll Down Indicator -->
@@ -155,7 +241,7 @@
     </section>
 
     <!-- About Me Section -->
-    <section class="section-padding py-20 px-8 max-w-6xl mx-auto desktop-container">
+    <section class="section-padding py-20 desktop-container">
         <!-- Section Header -->
         <div class="text-right mb-16">
             <h2 class="text-gray-900 text-sm tracking-widest">ABOUT ME</h2>
@@ -192,7 +278,7 @@
     </section>
 
     <!-- Software Section -->
-    <section class="section-padding py-20 px-8 max-w-6xl mx-auto desktop-container">
+    <section class="section-padding py-20 desktop-container">
         <!-- Section Header -->
         <div class="mb-12">
             <h2 class="text-gray-900 text-sm tracking-widest">SOFTWARE</h2>
@@ -202,7 +288,7 @@
         <div class="software-grid grid grid-cols-2 gap-32">
             
             <!-- Grid 1 -->
-            <div class="software-subgrid grid grid-cols-2 mxx-12">
+            <div class="software-subgrid grid grid-cols-2 gap-12">
                 <!-- Premiere Pro -->
                 <div class="text-center">
                     <div class="mb-3">
@@ -223,7 +309,7 @@
             </div>
             
             <!-- Grid 2 -->
-            <div class="software-subgrid grid grid-cols-2 mxx-12">
+            <div class="software-subgrid grid grid-cols-2 gap-12">
                 <!-- Lightroom Classic -->
                 <div class="text-center">
                     <div class="mb-3">
@@ -244,7 +330,7 @@
             </div>
 
             <!-- Grid 3 -->
-            <div class="software-subgrid grid grid-cols-2 mxx-12">
+            <div class="software-subgrid grid grid-cols-2 gap-12">
                 <!-- CapCut -->
                 <div class="text-center">
                     <div class="mb-3">
@@ -265,7 +351,7 @@
             </div>
             
             <!-- Grid 4 -->
-            <div class="software-subgrid grid grid-cols-2 mxx-12">
+            <div class="software-subgrid grid grid-cols-2 gap-12">
                 <!-- After Effects -->
                 <div class="text-center">
                     <div class="mb-3">
