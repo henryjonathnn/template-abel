@@ -412,6 +412,93 @@
                 font-size: 1.75rem;
             }
         }
+        
+        /* Projects Grid Layout - Laptop (1024px - 1439px) */
+        @media (min-width: 1024px) and (max-width: 1439px) {
+            .projects-grid {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .projects-grid > div:first-child {
+                width: 240px;
+                height: 384px;
+                flex-shrink: 0;
+            }
+            
+            .projects-grid > div:nth-child(2) {
+                width: 600px;
+                height: 256px;
+                margin-top: 112px;
+                flex-shrink: 0;
+            }
+            
+            .projects-grid > div:last-child {
+                width: 240px;
+                height: 384px;
+                flex-shrink: 0;
+            }
+        }
+        
+        /* Projects Grid Layout - Desktop (1440px - 1919px) */
+        @media (min-width: 1440px) and (max-width: 1919px) {
+            .projects-grid {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+            
+            .projects-grid > div:first-child {
+                width: 280px;
+                height: 420px;
+                flex-shrink: 0;
+            }
+            
+            .projects-grid > div:nth-child(2) {
+                width: 680px;
+                height: 280px;
+                margin-top: 100px;
+                flex-shrink: 0;
+            }
+            
+            .projects-grid > div:last-child {
+                width: 280px;
+                height: 420px;
+                flex-shrink: 0;
+            }
+        }
+        
+        /* Projects Grid Layout - Desktop Full HD (1920px+) */
+        @media (min-width: 1920px) {
+            .projects-grid {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+            }
+            
+            .projects-grid > div:first-child {
+                width: 320px;
+                height: 610px;
+                flex-shrink: 0;
+            }
+            
+            .projects-grid > div:nth-child(2) {
+                width: 1050px;
+                height: 450px;
+                margin-top: 150px;
+                flex-shrink: 0;
+            }
+            
+            .projects-grid > div:last-child {
+                width: 320px;
+                height: 610px;
+                flex-shrink: 0;
+            }
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -588,7 +675,7 @@
         </div>
 
         <!-- Projects Grid -->
-        <div class="projects-grid flex flex-col lg:flex-row items-center justify-center gap-6 max-w-6xl mx-auto">
+        <div class="projects-grid flex flex-col lg:flex-row items-center justify-between gap-6">
             <!-- Left Card (Vertical) -->
             <div class="w-full lg:w-60 h-96 rounded-2xl overflow-hidden shadow-xl relative group cursor-pointer transform hover:scale-105 transition-transform duration-300">
                 <img src="projects/project1.jpg" alt="VEX Project" class="w-full h-full object-cover">
@@ -599,11 +686,11 @@
                     </div>
             </div>
 
-            <!-- Center Card (Horizontal) -->
+             <!-- Center Card (Horizontal) -->
             <div class="w-full lg:w-96 h-64 mt-0 lg:mt-28 rounded-2xl overflow-hidden shadow-xl relative group cursor-pointer transform hover:scale-105 transition-transform duration-300">
                 <img src="banner.jpg" alt="Color Grading Project" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-                <div class="absolute bottom-6 text-white text-center">
+                <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white text-center">
                     <p class="text-sm font-bold tracking-wider uppercase mb-1">COLOR GRADING</p>
                     <p class="text-sm">Promotion Banner Shakti Wijaya Kediri Dental School Registration</p>
                 </div>
